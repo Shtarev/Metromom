@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metronom online</title>
+<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
+<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">
+</head>
+<body>
+<div class="rumpf">
+<div class="trapezium1"></div>
+<div class="trapezium2"></div>
+<div class="lineal"></div>
+<input type="range" id="pendel" class="pendel" min="1" max="33" step="1" value="10" oninput="tempo()" />
+</div>
+<div class="rumpfFuter">
+<div id="bedeutung">Andante maestoso</div>
+<div id="bpm">60 bpm</div>
+<input id="play" class="play" type="button" onclick="playClick()" value="play"/>
+<input id="pause" class="pause" type="button" onclick="pauseClick()" value="pause"/>
+<div id="Lautheit">Lautheit: 50</div>
+<input type="range" id="lautheit" min="0.0" max="1.0" step="0.1" value="0.5" oninput="lautheitFoo()" />
+</div>
+<footer>
+Copyright &copy; 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> | All rights reserved | Design & programmierung by <a href="https://www.netzexplorer.com">Andrey Shtarev</a>
+</footer>
+<script src="script/initialisierung.js"></script>
+<script src="script/tempo.js"></script>
+<script src="script/play.js"></script>
+<script src="script/lautheitFoo.js"></script>
+</body>
+</html>
